@@ -10,6 +10,7 @@ def fibonacci(posicion):
     else:
         secuencia = [0, 1]
         while len(secuencia) < posicion:
+            #Suma el último y el penúltimo numero de la secuencia para obtener el siguiente número
             next_num = secuencia[-1] + secuencia[-2]
             secuencia.append(next_num)
         return secuencia
