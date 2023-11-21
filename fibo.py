@@ -1,5 +1,4 @@
-#Crea un script que genere la secuencia de Fibonacci
-#y retorna el número que está en una posición dada
+#Crea un script que genere la secuencia de Fibonacci y retorna el número que está en una posición dada
 def fibonacci(posicion):
     if posicion <= 0:
         return []

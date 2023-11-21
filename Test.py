@@ -2,12 +2,17 @@
 import unittest
 from fibo import fibonacci
 
-class TestFibonacci(unittest.TestCase):
+class Test(unittest.TestCase):
 
     def test_secuencia_fibonacci(self):
-        # Verificamos si el quinto número de la secuencia es igual a 3
-        resultado = fibonacci(5)
-        self.assertEqual(resultado[4],3)
+        # Pedimos por consola para poder hacer distintas pruebas sin modificar el código
+        print("Qué posición desea comprobar?:")
+        posicion = int(input())
+        print("Dame el número que debería estar en esa posición:")
+        numero = int(input())
+        # Verificamos si el número de la posición indicada es igual al que hemos dado en la secuencia
+        resultado = fibonacci(posicion)
+        self.assertEqual(resultado[posicion-1],numero)
 
 if __name__ == '__main__':
     unittest.main()
